@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Thermostat</title>
+    <title>Thermostat of the Future</title>
   </head>
   <body>
     <section>
-      <h1 id="temperature"></h1>
+      <h1 id="temp">Temperature</h1>
       <p>
-        <button id="temperature-up">+</button>
-        <button id="temperature-down">-</button>
+        <input type="text" name="new-temp"><br>
+        <input type="submit" value="Change Temperature">
         <button id="temperature-reset">reset</button>
         power saving mode is <span id="power-saving-status">on</span>
-        <button id="powersaving-on">PSM on</button>
-        <button id="powersaving-off">PSM off</button>
+        <button id="powersaving-on">Toggle Power Saving Mode</button>
       </p>
     </section>
 
-    <script src="js/thermostat.js"></script>
+    <script src="src/thermostat.js"></script>
   </body>
 </html>
