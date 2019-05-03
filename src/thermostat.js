@@ -10,13 +10,13 @@ function Thermostat() {
   };
 
   Thermostat.prototype.togglePSM = function() {
-      this._changeMaxLimit();
-     return this.powerSaveMode = !this.powerSaveMode;
+     this.powerSaveMode = !this.powerSaveMode;
+     this._changeMaxLimit();
   };
 
   Thermostat.prototype._changeMaxLimit = function() {
-    if (this.powerSaveMode === true) { this.MAX_LIMIT_PSM = 25; }
-    this.MAX_LIMIT_PSM = 32;
+    if (this.powerSaveMode === false) { return this.MAX_LIMIT_PSM = 32; }
+    this.MAX_LIMIT_PSM = 25;
   };
 
   Thermostat.prototype._isPSMOn = function() {
