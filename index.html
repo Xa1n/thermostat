@@ -31,6 +31,18 @@ var thermostat = new Thermostat();
 
 $('#temp').text(thermostat.temp + '°C');
 
+$('#powersaving-on').on('click', function() {
+  if (thermostat.powerSaveMode == true) {
+    thermostat.togglePSM();
+    $('#temperature').text(thermostat.temp + '°C');
+    $('#power-saving-status').text('off');
+  } else {
+    thermostat.togglePSM();
+    $('#temperature').text(thermostat.temp + '°C');
+    $('#power-saving-status').text('on');
+  }
+});
+
 });
 
 </script>
