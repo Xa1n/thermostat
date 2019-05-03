@@ -3,7 +3,7 @@
   <head>
     <center>
     <title>Thermostat of the Future</title>
-    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="./src/thermostat.js"></script>
     <link rel="stylesheet" href="skeleton.css">
   </head>
   <body>
@@ -17,10 +17,20 @@
         <button id="powersaving-on">Toggle Power Saving Mode</button>
       </p>
     </section>
-    <script src="src/thermostat.js"></script>
-    <script>
-    
-    </script>
-      </center>
-  </body>
+  </center>
+</body>
 </html>
+
+<script src="node_modules/jquery/dist/jquery.js"></script>
+
+<script>
+
+$( function() {
+
+var thermostat = new Thermostat();
+
+$('#temp').text(thermostat.temp + '°C');
+
+});
+
+</script>
