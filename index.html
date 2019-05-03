@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Thermostat of the Future</title>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
   </head>
   <body>
     <section>
@@ -15,6 +16,19 @@
       </p>
     </section>
 
-    <script src="src/thermostat.js"></script>
+    <a href="http://jquery.com/">jQuery</a>
+
+    <script>
+
+        $( document ).ready(function() {
+         
+         $( "a" ).click(function( event ) {
+        
+             alert( "Thanks for visiting!" );
+         });
+        });
+            
+        </script>
+
   </body>
 </html>
